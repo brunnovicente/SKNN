@@ -12,8 +12,8 @@ from sklearn.preprocessing import MinMaxScaler
 
 """ Coleta e Normalização dos dados """
 sca = MinMaxScaler()
-dados = BD.base_qualquer('d:/basedados/iris.csv')
-Y = dados[1] -1 # Para ficar com classe 0, 1 , 2
+dados = BD.base_qualquer('d:/basedados/mnist64.csv')
+Y = dados[1] # Para ficar com classe 0, 1 , 2
 #X = sca.fit_transform(dados[0])
 X = dados[0]
 L, U, y, yu = train_test_split(X, Y, train_size=0.3, test_size=0.7, stratify=Y)
